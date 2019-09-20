@@ -1,12 +1,13 @@
 # block-ip-country
-A php script running with linux comand in order to block the countries ips from firewall
+If you need multiple countries to be blocked or allowed please for each country and for each rule ( block, allow ) create a new script replacing only the link of the country
 
-This is a simple php script executing some Linux commands in order to block access to ip ranges of specifich countries.
-You can start this script from terminal and also insert it to run via cron, so if a new ip, ip range will pop up it will automatically added in the firewall.
+---allow-ip-only-specified-incoming.php
+Does allow only ips of specifich countries you define to have access, the rest it will be blocked
 
-This script is for blocking outgoing traffic from server to that spcifich country.
 
-Please let me know if you need otherkind of firewall block so i can add it.
+---block-outgoing.php
+Does block the ips of the country and does not allow the server to reach out that ips, for outgoing traffic
+
 
 Thank you
 Klevin
