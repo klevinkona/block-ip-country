@@ -41,7 +41,7 @@ if (file_exists($country_file)) {
 			$string = str_replace(array('>', '<' ), '', $data2);
 			$final = rtrim($string, "\n\r") ;
 			//echo 'iptables -A OUTPUT -d ' . $final . " -j DROP" . "\n";
-			exec("iptables -A INPUT -d $final   -j ACCEPT");
+			exec("iptables -A INPUT -s $final   -j ACCEPT");
 
 
 		}
@@ -71,8 +71,8 @@ if (file_exists($country_file)) {
 
 		if ($data != null) {
 			$final2 = rtrim($data, "\n\r");
-			//echo 'iptables -A OUTPUT -d ' .  $final2 . " -j DROP" . "\n";
-			exec("iptables -A INPUT -d $final2   -j ACCEPT");
+			//echo 'iptables -A OUTPUT -s ' .  $final2 . " -j DROP" . "\n";
+			exec("iptables -A INPUT -s $final2   -j ACCEPT");
 		}
 	}
 
